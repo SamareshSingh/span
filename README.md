@@ -21,7 +21,7 @@ See the [Beman Library Maturity Model](https://github.com/bemanproject/beman/blo
 - Header-only, no external runtime dependencies
 - Supports both fixed and dynamic extents (`beman::span::dynamic_extent`)
 - Full constructor overloads: C-array, `std::array`, pointer+count, pointer pair, generic range
-- Subviews: `first()`, `last()`, `subspan()` — both compile-time and runtime versions
+- Subviews: `first()`, `last()`, `subspan()` both compile-time and runtime versions
 - Object representation helpers: `as_bytes()`, `as_writable_bytes()`
 - Deduction guides (C++17)
 - `constexpr` throughout
