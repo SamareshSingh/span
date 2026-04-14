@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 [![Apache-2.0 License](https://img.shields.io/badge/license-Apache--2.0%20WITH%20LLVM--exception-blue.svg)](LICENSE)
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://en.cppreference.com/w/cpp/20)
 
-**Implements:** `std::span` — a non-owning view over a contiguous sequence of objects.
+**Implements:** `std::span` a non-owning view over a contiguous sequence of objects.
 See [cppreference — std::span](https://en.cppreference.com/w/cpp/container/span) and
 [eel.is/c++draft/views.span](https://eel.is/c++draft/views.span).
 
