@@ -229,6 +229,19 @@ class span {
         return {data_ + offset, count == dynamic_extent ? size() - offset : count};
     }
 
+    template <std::size_t E = Extent, std::enable_if_t<E == dynamic_extent, int> = 0>
+    constexpr void remove_prefix(size_type n) noexcept {
+        assert(n <= size());
+        data_ += n;
+        size_ -= n;
+    }
+
+    template <std::size_t E = Extent, std::enable_if_t<E == dynamic_extent, int> = 0>
+    constexpr void remove_suffix(size_type n) noexcept {
+        assert(n <= size());
+        size_ -= n;
+    }
+
     // 26.7.3.4 Observers [span.obs]
 
     [[nodiscard]] constexpr size_type size() const noexcept { return size_; }
