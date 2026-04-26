@@ -265,6 +265,11 @@ TEST(SpanIterators, cbegin_cend) {
     bsp::span<int> s(arr);
     EXPECT_EQ(*s.cbegin(), 7);
     EXPECT_EQ(s.cend() - s.cbegin(), 3);
+
+    static_assert(std::is_same_v<decltype(s.cbegin()), bsp::span<int>::const_iterator>);
+    static_assert(std::is_same_v<bsp::span<int>::const_iterator, const int*>);
+    static_assert(std::is_same_v<decltype(s.crbegin()),
+                                 bsp::span<int>::const_reverse_iterator>);
 }
 
 TEST(SpanIterators, std_algorithm_sort) {
